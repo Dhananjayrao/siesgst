@@ -1,0 +1,171 @@
+.news{
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+}
+.card {
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width:200px;
+  border-radius: 10px;
+  background-color: #fff;
+  background-color: rgba(255,255,255,0.5);
+  border-color: black; 
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  
+}
+
+/* Add some padding inside the card container */
+.container {
+  padding: 2px 16px;
+  
+}
+.para {
+  flex-wrap: wrap;
+}
+.img{
+  width: 50%;
+}
+.bod{
+  display: flex;
+  flex-direction: row;
+}
+.main{
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+
+  width: 1200px;
+  background-color:#a7d9d7;
+  opacity: 0.9;
+  border-radius: 10px;
+}
+
+.logo{
+  padding: 10px;
+}
+.log{
+  background-color: #a7d9d7;
+}
+.ach{
+  background-color: #fff;
+  opacity: 0.8;
+  border-radius: 10px;
+}
+.list{
+  background-color:darkcyan;
+  color: white;
+  padding: 14px 25px;
+  text-align: center; 
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 10px;
+}
+.remove{
+  
+    list-style-type: none;
+    margin: 0;
+    padding: 10px;
+  }
+
+
+
+
+  .carousel-wrapper{
+    height:400px;
+    position:relative;
+    width:800px;
+    margin:0 auto;
+  }
+  .carousel-item{
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    padding:25px 50px;
+    opacity:0;
+    transition: all 0.5s ease-in-out;
+  }
+  .arrow{
+    border: solid black;
+      border-width: 0 3px 3px 0;
+      display: inline-block;
+      padding: 12px;
+  }
+  
+  .arrow-prev{
+    left:-30px;
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%) rotate(135deg);
+  }
+   
+  .arrow-next{
+      right:-30px;
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%) rotate(-45deg);
+    }
+  
+  .light{
+    color:white;
+  }
+  
+  @media (max-width: 480px) {
+        .arrow, .light .arrow {
+          background-size: 10px;
+          background-position: 10px 50%;
+        }
+      }
+  
+  
+  /*Select every element*/
+  [id^="item"] {
+      display: none;
+    }
+  
+  .item-1 {
+      z-index: 2;
+      opacity: 1;
+    background:url('https://i.ytimg.com/vi/QLiIcKJx8co/maxresdefault.jpg');
+    background-size:cover;
+    padding: 10px;
+     border-radius: 10px;
+    }
+  .item-2{
+    background:url('https://i.ytimg.com/vi/55DNZiqLK4Q/maxresdefault.jpg');
+     background-size:cover;
+     padding: 10px;
+     border-radius: 10px;
+  }
+  .item-3{
+    background:url('https://i0.wp.com/whataftercollege.com/wp-content/uploads/2019/03/Image-8-Tatva-Moksh-Lakshya.jpg?fit=900%2C470');
+     background-size:cover;
+     padding: 10px;
+     border-radius: 10px;
+  }
+  
+  *:target ~ .item-1 {
+      opacity: 1;
+    }
+  
+  #item-1:target ~ .item-1 {
+      opacity: 1;
+    }
+  
+  #item-2:target ~ .item-2, #item-3:target ~ .item-3 {
+      z-index: 3;
+      opacity: 1;
+    }
+  .text{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
